@@ -23,7 +23,17 @@ This is a lab to practice the follow techniques:
 - (?) Create a bastion to access the RDS cluster
 - Do this all without hardcoding any IP addresses
 
+## Lab Architecture
+
+The following picture shows the architecture we are going to create with Terraform:
+
+TODO: Draw infrastructure.
+
 ## Additional Resources
 
 - [Terraform Introduction](https://www.terraform.io/intro/index.html)
 - [Terraform Tutorial](https://learn.hashicorp.com/terraform)
+
+## Improvements
+
+- Restrict SSH access to the EC2 instances from the IT VPN. The reason we didn't do that for this lab is because we didn't know the IP range or have access to the IT VPN.

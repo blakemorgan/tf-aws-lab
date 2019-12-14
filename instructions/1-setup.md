@@ -1,5 +1,7 @@
 # Setup
 
+Follow these instructions to prepare your computer with the tools you need for the lab.
+
 ## AWS Account
 
 1. Join [AWS Educate](https://aws.amazon.com/education/awseducate/)
@@ -23,7 +25,10 @@
 }
 ```
 
-## Terraform
+## Install Terraform
 
 1. Download the [Terraform CLI tool](https://terraform.io/downloads).
 2. Unzip the downloaded file and place it in your path.
+3. Pick an IDE to develop in (this lab has been tested in VSCode and IntelliJ) and install the Terraform plugin for the IDE (it needs to support Terraform at least v0.12.0):
+   - *VSCode*: Install the Terraform extension by Mikael Olenfalk. After installing it, press Ctrl+Shift+P, type Terraform in the search box, and enable the experimental language server.
+   - *IntelliJ*: Install the Terraform plugin.
