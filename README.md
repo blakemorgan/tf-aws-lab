@@ -22,3 +22,8 @@ This is a lab to practice the follow techniques:
 - Create the necessary VPC(s), subnet(s), security group(s), etc. to enforce these access controls.
 - (?) Create a bastion to access the RDS cluster
 - Do this all without hardcoding any IP addresses
+
+## Additional Resources
+
+- [Terraform Introduction](https://www.terraform.io/intro/index.html)
+- [Terraform Tutorial](https://learn.hashicorp.com/terraform)
