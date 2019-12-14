@@ -22,3 +22,8 @@
     "Arn": "arn:aws:iam::486277818405:user/btm296-cli"
 }
 ```
+
+## Terraform
+
+1. Download the [Terraform CLI tool](https://terraform.io/downloads).
+2. Unzip the downloaded file and place it in your path.
