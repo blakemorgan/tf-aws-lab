@@ -37,9 +37,9 @@ resource "aws_security_group" "allow_ssh" {
 
   # TODO: Close down to IT VPN
   ingress {
-    from_port    = 22222
-    to_port      = 22222
-    protocol     = "tcp"
-    cidr_blocker = ["0.0.0.0/0"]
+    from_port   = 22222
+    to_port     = 22222
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
   }
 }

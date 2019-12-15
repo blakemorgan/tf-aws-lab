@@ -29,6 +29,4 @@ Follow these instructions to prepare your computer with the tools you need for t
 
 1. Download the [Terraform CLI tool](https://terraform.io/downloads).
 2. Unzip the downloaded file and place it in your path.
-3. Pick an IDE to develop in (this lab has been tested in VSCode and IntelliJ) and install the Terraform plugin for the IDE (it needs to support Terraform at least v0.12.0):
-   - *VSCode*: Install the Terraform extension by Mikael Olenfalk. After installing it, press Ctrl+Shift+P, type Terraform in the search box, and enable the experimental language server.
-   - *IntelliJ*: Install the Terraform plugin.
+3. If you want to use an IDE, make sure to install the respective Terraform plugin and that it supports Terraform v0.12. IntelliJ by JetBrains has been the most helpful for me, which you can get for free [as a student](https://www.jetbrains.com/student/).

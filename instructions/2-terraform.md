@@ -36,8 +36,20 @@ The instructions below will guide you in making the resources you need with Terr
    - Create an [internet gateway](https://www.terraform.io/docs/providers/aws/r/internet_gateway.html) for your new VPC.
    - Create a [route table](https://www.terraform.io/docs/providers/aws/r/route_table.html) with a [route table association](https://www.terraform.io/docs/providers/aws/r/route_table_association.html) connecting your public subnet to the internet gateway.
    - Create a [security group](https://www.terraform.io/docs/providers/aws/r/security_group.html) allowing access into your VPC.
+4. *Compute*: Now we will create the EC2 instances and elastic load balancer.
+   - Create a Terraform file called `compute.tf`
+   - Create an SSH key pair: `ssh-keygen -t rsa -b 4096`
+   - Upload that key pair to AWS by creating a [key pair](https://www.terraform.io/docs/providers/aws/r/key_pair.html) resource.
+   - Create an [EC2 Instances](https://www.terraform.io/docs/providers/aws/r/instance.html) with the following characteristics:
+      - Based of the [Amazon Linux AMI](https://aws.amazon.com/amazon-linux-ami/)
+      - `t2.micro` instance type
+      - Connected to the key pair you created
+      - Monitoring enabled
+      - Connected to be VPC security group that was created. You'll want to use the `vpc_security_group_ids` and not the `secuiryt_groups` property.
+      - Placed into the public subnet
 
 
 ## Additional Resources
 
 - [Creating a VPC with an Internet Gateway](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html)
+- [Amazon Linux AMI ID's](https://aws.amazon.com/amazon-linux-ami/)
