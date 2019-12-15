@@ -16,18 +16,15 @@ This is a lab to practice the follow techniques:
 
 ## Objectives
 
-- Create a load balancer accessible form the internet.
-- Create two different EC2 instances fronted by the load balancer and only accessible by the load balancer.
-- In a separate, private subnet, create and Aurora RDS cluster and instances and only be able to connect to it from your EC2 instances.
+- Create a bastion to access the RDS cluster
+- In a separate, private subnet, create and Aurora RDS cluster and only be able to connect to it from your EC2 instances. This instance will contain two encrypted databases: one for writing/reading and one for read-only.
 - Create the necessary VPC(s), subnet(s), security group(s), etc. to enforce these access controls.
-- (?) Create a bastion to access the RDS cluster
-- Do this all without hardcoding any IP addresses
 
 ## Lab Architecture
 
 The following picture shows the architecture we are going to create with Terraform:
 
-TODO: Draw infrastructure.
+![Lab Infrastructure](./architecture.png)
 
 ## Additional Resources
 
