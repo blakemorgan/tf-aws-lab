@@ -52,7 +52,15 @@ The instructions below will guide you in making the resources you need with Terr
    - Create a database subnet group from the private subnet.
    - Create an RDS cluster with encrypted storage, in the security group you created in step three, and with the database subnet group you just created. It should be the `aurora-mysql` engine type.
    - Create two database instance in the cluster with the type `db.m5.large`.
+   
+## Create the Resources
 
+Now that the resources have been defined in code, we need to deploy them to AWS. All we need to do is run the Terraform commands in a command line. Terraform is smart enough to combine all the Terraform files and prioritize what resources need to be made when.
+
+1. In a terminal, navigate to the directory where the Terraform files are.
+2. Run `aws2 configure` again if you need to reconnect your command line to AWS.
+3. Run `terraform init` to initialize that terraform directory.
+4. Run `terraform apply` to create the resources in AWS. When you run that command, you'll be prompted with a plan which is a blueprint of the resources that will be made in AWS with their associated properties. Type `yes` when prompted to confirm the creation of those resources.
 
 ## Additional Resources
 
