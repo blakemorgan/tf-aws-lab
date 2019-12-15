@@ -8,6 +8,6 @@ resource "aws_instance" "instance" {
   instance_type          = "t2.micro"
   key_name               = aws_key_pair.key.key_name
   monitoring             = true
-  vpc_security_group_ids = [aws_security_group.allow_ssh.id]
+  vpc_security_group_ids = [aws_security_group.sg.id]
   subnet_id              = aws_subnet.public.id
 }

@@ -35,7 +35,7 @@ The instructions below will guide you in making the resources you need with Terr
    - Create two [subnets](https://www.terraform.io/docs/providers/aws/r/vpc.html) in the newly created VPC: one accessibly by the internet and one with no connection to the internet.
    - Create an [internet gateway](https://www.terraform.io/docs/providers/aws/r/internet_gateway.html) for your new VPC.
    - Create a [route table](https://www.terraform.io/docs/providers/aws/r/route_table.html) with a [route table association](https://www.terraform.io/docs/providers/aws/r/route_table_association.html) connecting your public subnet to the internet gateway.
-   - Create a [security group](https://www.terraform.io/docs/providers/aws/r/security_group.html) allowing access into your VPC.
+   - Create a [security group](https://www.terraform.io/docs/providers/aws/r/security_group.html) allowing SSH, HTTP, and MySQL access into your VPC and all outbound connections.
 4. *Compute*: Now we will create the EC2 instances and elastic load balancer.
    - Create a Terraform file called `compute.tf`
    - Create an SSH key pair: `ssh-keygen -t rsa -b 4096`
@@ -47,6 +47,11 @@ The instructions below will guide you in making the resources you need with Terr
       - Monitoring enabled
       - Connected to be VPC security group that was created. You'll want to use the `vpc_security_group_ids` and not the `secuiryt_groups` property.
       - Placed into the public subnet
+5. *Database*: Last, we need to create an RDS database custer with two RDS instances (one master and one slave).
+   - Create a [KMS key](https://www.terraform.io/docs/providers/aws/r/kms_key.html) to encrypt the database 
+   - Create a database subnet group from the private subnet.
+   - Create an RDS cluster with encrypted storage, in the security group you created in step three, and with the database subnet group you just created. It should be the `aurora-mysql` engine type.
+   - Create two database instance in the cluster with the type `db.m5.large`.
 
 
 ## Additional Resources
