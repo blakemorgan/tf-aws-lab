@@ -58,3 +58,6 @@ The instructions below will guide you in making the resources you need with Terr
 
 - [Creating a VPC with an Internet Gateway](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html)
 - [Amazon Linux AMI ID's](https://aws.amazon.com/amazon-linux-ami/)
+- [AWS EC2 Instances](https://aws.amazon.com/ec2/instance-types/)
+- [AWS Key Management Service](https://aws.amazon.com/kms/)
+- [AWS Relational Database Service](https://aws.amazon.com/rds/)
