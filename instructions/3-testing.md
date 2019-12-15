@@ -26,4 +26,4 @@ We can test that our subnets are setup correctly by connecting to our RDS cluste
 
 ## Cleanup
 
-After you've passed-off the lab, simply run `terraform destroy` then all the resources created by this project will be deleted. That saves you additional costs from having these now redundant resources running.
+After you've passed-off the lab, simply run `terraform destroy` then all the resources created by this project will be deleted. That saves you additional costs from having these now redundant resources running. After typing that command you'll be presented with the plan showing that Terraform will destroy all your resources. Simply type "yes" to confirm deletion.
