@@ -32,7 +32,7 @@ The instructions below will guide you in making the resources you need with Terr
 3. *Networks*: Next we need to create the Virutal Private Cloud and additional networking resources for that VPC:
    - Create a Terraform file called `networks.tf`
    - Create a [VPC](https://www.terraform.io/docs/providers/aws/r/vpc.html) with a CIDR block of 172.20.0.0/16.
-   - Create two [subnets](https://www.terraform.io/docs/providers/aws/r/vpc.html) in the newly created VPC: one accessibly by the internet and one with no connection to the internet.
+   - Create three [subnets](https://www.terraform.io/docs/providers/aws/r/vpc.html) in the newly created VPC: one accessible by the internet and two with no connection to the internet.
    - Create an [internet gateway](https://www.terraform.io/docs/providers/aws/r/internet_gateway.html) for your new VPC.
    - Create a [route table](https://www.terraform.io/docs/providers/aws/r/route_table.html) with a [route table association](https://www.terraform.io/docs/providers/aws/r/route_table_association.html) connecting your public subnet to the internet gateway.
    - Create a [security group](https://www.terraform.io/docs/providers/aws/r/security_group.html) allowing SSH, HTTP, and MySQL access into your VPC and all outbound connections.
@@ -60,7 +60,9 @@ Now that the resources have been defined in code, we need to deploy them to AWS.
 1. In a terminal, navigate to the directory where the Terraform files are.
 2. Run `aws2 configure` again if you need to reconnect your command line to AWS.
 3. Run `terraform init` to initialize that terraform directory.
-4. Run `terraform apply` to create the resources in AWS. When you run that command, you'll be prompted with a plan which is a blueprint of the resources that will be made in AWS with their associated properties. Type `yes` when prompted to confirm the creation of those resources.
+4. Run `terraform apply` to create the resources in AWS. When you run that command, you'll be prompted with a plan which is a blueprint of the resources that will be made in AWS with their associated properties. Type `yes` when prompted to confirm the creation of those resources. When you run those commands, a folder (`.terraform`) will be created along with a `terraform.tfstate` file. Those files contain key, access ID's, and other confidential information that should not be shared. For example, if using version control, be sure to ignore that folder and those files.
+
+Using infrastructure-as-code does sacrifice the convenience of a graphic console, but does given you the added bonus of being able to document your infrastructure. That being said, you may run into a few errors applying this infrastructure. These errors are not a problem with Terraform itself, but are comprable to the same errors that would appear if you tried to make resources with that configuration in the console GUI.
 
 ## Additional Resources
 
