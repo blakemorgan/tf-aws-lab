@@ -26,6 +26,10 @@ The following picture shows the architecture we are going to create with Terrafo
 
 ![Lab Infrastructure](./architecture.png)
 
+## Pass Off
+
+Show the TA that you can connect to your EC2 instance via the internet and then your RDS cluster from your EC2 instance.
+
 ## Additional Resources
 
 - [Terraform Introduction](https://www.terraform.io/intro/index.html)
