@@ -50,7 +50,7 @@ The instructions below will guide you in making the resources you need with Terr
 5. *Database*: Last, we need to create an RDS database custer with two RDS instances (one master and one slave).
    - Create a [KMS key](https://www.terraform.io/docs/providers/aws/r/kms_key.html) to encrypt the database 
    - Create a database subnet group from the private subnet.
-   - Create an RDS cluster with encrypted storage, in the security group you created in step three, and with the database subnet group you just created. It should be the `aurora-mysql` engine type.
+   - Create an RDS cluster with encrypted storage, in the security group you created in step three, and with the database subnet group you just created. It should be the `aurora-mysql` engine type. **Note**: due to a Terraform bug, be sure to include `skip_final_snapshot = true` when creating the cluster so that Terraform can delete it when done.
    - Create two database instance in the cluster with the type `db.m5.large`.
    
 ## Create the Resources

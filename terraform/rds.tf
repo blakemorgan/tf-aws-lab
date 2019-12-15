@@ -14,6 +14,7 @@ resource "aws_rds_cluster" "cluster" {
   db_subnet_group_name   = aws_db_subnet_group.subnet_group.name
   kms_key_id             = aws_kms_key.key.arn
   engine                 = "aurora-mysql"
+  skip_final_snapshot    = true
 }
 
 resource "aws_rds_cluster_instance" "instance" {
