@@ -27,7 +27,7 @@ Follow these instructions to prepare your computer with the tools you need for t
 
 ## Install Terraform
 
-1. Download the [Terraform CLI tool](https://terraform.io/downloads).
+1. Download the [Terraform CLI tool](https://www.terraform.io/downloads.html).
 2. Unzip the downloaded file and place it in your path.
 3. If you want to use an IDE, make sure to install the respective Terraform plugin and that it supports Terraform v0.12. IntelliJ by JetBrains has been the most helpful for me, which you can get for free [as a student](https://www.jetbrains.com/student/).
 
