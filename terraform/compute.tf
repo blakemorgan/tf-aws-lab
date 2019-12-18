@@ -5,6 +5,7 @@ resource "aws_key_pair" "key" {
 
 resource "aws_instance" "instance" {
   ami                    = "ami-a0cfeed8"
+  availability_zone      = "us-west-2a"
   instance_type          = "t2.micro"
   key_name               = aws_key_pair.key.key_name
   monitoring             = true
