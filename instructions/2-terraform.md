@@ -38,7 +38,7 @@ The instructions below will guide you in making the resources you need with Terr
    - Create a [security group](https://www.terraform.io/docs/providers/aws/r/security_group.html) allowing SSH, HTTP, and MySQL access into your VPC and all outbound connections.
 4. *Compute*: Now we will create the EC2 instances and elastic load balancer.
    - Create a Terraform file called `compute.tf`
-   - Create an SSH key pair: `ssh-keygen -t rsa -b 4096`
+   - Create an SSH key pair: `ssh-keygen -t rsa -b 4096` (use all the default options).
    - Upload that key pair to AWS by creating a [key pair](https://www.terraform.io/docs/providers/aws/r/key_pair.html) resource.
    - Create an [EC2 Instances](https://www.terraform.io/docs/providers/aws/r/instance.html) with the following characteristics:
       - Based of the [Amazon Linux AMI](https://aws.amazon.com/amazon-linux-ami/)
