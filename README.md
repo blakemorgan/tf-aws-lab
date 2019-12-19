@@ -30,6 +30,12 @@ The following picture shows the architecture we are going to create with Terrafo
 
 Show the TA that you can connect to your EC2 instance via the internet and then your RDS cluster from your EC2 instance.
 
+### Grading
+
+- 100/100: All objectives are complete.
+- 85/100: You can only connect to the EC2 instance.
+- 70/100: You created the VPC and configured the subnets correctly.
+
 ## Additional Resources
 
 - [Terraform Introduction](https://www.terraform.io/intro/index.html)
