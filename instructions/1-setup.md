@@ -28,9 +28,12 @@ Follow these instructions to prepare your computer with the tools you need for t
 ## Install Terraform
 
 1. Download the [Terraform CLI tool](https://www.terraform.io/downloads.html).
-2. Unzip the downloaded file and place it in your path.
+2. Unzip the downloaded file and add the directory its in to you environment PATH.
 3. If you want to use an IDE, make sure to install the respective Terraform plugin and that it supports Terraform v0.12. IntelliJ by JetBrains has been the most helpful for me, which you can get for free [as a student](https://www.jetbrains.com/student/).
 
 ## MySQL Client & SSH Client
 
 When it comes time to test you network, you will need to use an SSH and MySQL client. You can find a myriad of those clients online. Pick any that work for you.
+
+- [PuTTY](https://www.putty.org/): SSH client
+- [MySQL](https://dev.mysql.com/doc/mysql-getting-started/en/#mysql-getting-started-installing): MySQL client
